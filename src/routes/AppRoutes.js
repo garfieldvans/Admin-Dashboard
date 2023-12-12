@@ -8,6 +8,8 @@ import Student from '../pages/student/Student';
 import UnderContruction from '../components/UnderConstruction';
 import Course from '../pages/course/Course';
 import Payment from '../pages/payment/Payment';
+import Setting from '../pages/settings/settings';
+import Reports from '../pages/reports/Reports';
 
 const AppRoutes = () => {
   return (
@@ -35,8 +37,8 @@ const AppRoutes = () => {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="students" element={<Student />} />
         <Route path="payment" element={<Payment />} />
-        <Route path="report" element={<UnderContruction />} />
-        <Route path="settings" element={<UnderContruction />} />
+        <Route path="report" element={<Reports />} />
+        <Route path="settings" element={<Setting/>} />
       </Route>
     </Routes>
   );
