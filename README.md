@@ -1,3 +1,9 @@
+## Sign in Section for testing
+
+Sign in with: 
+username: user(1-5)@example.com
+password: password
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
