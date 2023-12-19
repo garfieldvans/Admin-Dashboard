@@ -92,13 +92,15 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
       confirmButtonText="Save"
       isButtonLoading={isLoading}
     >
-      <Flex gap="16px" direction={'column'}>
+      <Flex gap="14px" direction={'column'}>
         <FormInput
           name="name"
           value={form.name}
           onChange={handleChange}
           label="Name"
           placeholder="Karthi"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
         <FormInput
           name="email"
@@ -106,6 +108,8 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
           onChange={handleChange}
           label="Email"
           placeholder="karthi@gmail.com"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
         <FormInput
           name="phoneNumber"
@@ -113,6 +117,8 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
           onChange={handleChange}
           label="Phone"
           placeholder="085XXX"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
         <FormInput
           name="enrollNumber"
@@ -120,6 +126,8 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
           onChange={handleChange}
           label="Enroll Number"
           placeholder="123456"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
         <FormInput
           type="date"
@@ -128,6 +136,8 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
           onChange={handleChange}
           label="Date of Admission"
           placeholder="2023-12-31"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
         <FormInput
           type="file"
@@ -135,6 +145,8 @@ function ModalFormStudent({ data, onClose, isOpen, refresh }) {
           onChange={handleChange}
           label="Image"
           accept="image/*"
+          font={{base:'sm', md:'md'}}
+          size={{ base: 'sm',md:'md'}}
         />
       </Flex>
     </Modal>

@@ -1,13 +1,15 @@
-import { Button as CButton } from '@chakra-ui/react';
+import { Button as CButton, Text } from '@chakra-ui/react';
 
 const Button = ({
   text,
-  bgColor = 'blue',
+  bgColor="tomato",
   onClick,
   isBggradient,
   variant = 'sold',
   textColor = 'white',
   isLoading,
+  size,
+  
 }) => {
   return (
     <CButton
@@ -20,13 +22,15 @@ const Button = ({
       }
       variant={variant}
       onClick={onClick}
-      size="lg"
+      size={size}
       //   padding="50vh"
       // fontSize="5vh"
       backgroundColor={bgColor}
       color={textColor}
     >
+      <Text>
       {text}
+      </Text>
     </CButton>
   );
 };

@@ -3,17 +3,19 @@ import { Box, Input, Text } from '@chakra-ui/react';
 const FormInput = ({
   label,
   placeholder,
-  size = 'md',
+  size,
   type,
   onChange,
   value,
   name,
   readOnly,
   accept,
+  font,
+  
 }) => {
   return (
     <Box>
-      <Text mb="6px">{label}</Text>
+      <Text mb="6px" fontSize={{base:'sm', md: 'md'}}>{label}</Text>
       <Input
         placeholder={placeholder}
         isDisabled={readOnly}
@@ -24,6 +26,7 @@ const FormInput = ({
         size={size}
         type={type}
         accept={accept}
+        fontSize={font}
       />
     </Box>
   );

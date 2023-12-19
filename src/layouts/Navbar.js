@@ -36,16 +36,9 @@ const Navbar = ({ onOpen, ...rest }) => {
         onClick={onOpen}
         variant="outline"
         aria-label="open menu"
+        mr={{base: "10px", md: 'none'}}
         icon={<FiMenu />}
       />
-      <Text
-        display={{ base: 'flex', md: 'none' }}
-        fontSize="2xl"
-        fontFamily="monospace"
-        fontWeight="bold"
-      >
-        Logo
-      </Text>
       <Box
         width="212px"
         mr="27px"

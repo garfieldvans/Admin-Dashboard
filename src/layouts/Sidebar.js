@@ -86,24 +86,25 @@ const Sidebar = ({ onClose, ...rest }) => {
       w={{ base: 'full', md: 60 }}
       pos="fixed"
       h="full"
+      scrollBehavior={'smooth'}
       {...rest}
     >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Image src={window.location.origin + '/codemasters_logo.png'} />
+      <Flex h="20" alignItems="center" mx="4" justifyContent="space-between">
+        <Image src={window.location.origin + '/codemasters_logo.png'} maxH={{base: "15px", md: "20px"}} ml={{base: '25%'}} />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
-      <Box mb="40px">
+      <Box mb="10px" display={{base: 'none', md: 'block'}}>
         <Center>
           <Image
             src={window.location.origin + '/Avatar.png'}
             borderRadius="full"
-            boxSize="50%"
+            boxSize="30%"
             maxWidth="50vh"
             maxHeight="50vh"
           />
         </Center>
-        <Center mt="8px">
-          <Text fontSize="md" color="gray.500">
+        <Center mt="4px">
+          <Text fontSize="sm" color="gray.500">
             Boodat
           </Text>
         </Center>
@@ -113,7 +114,7 @@ const Sidebar = ({ onClose, ...rest }) => {
           </Text>
         </Center>
       </Box>
-      <Flex direction="column" gap="16px">
+      <Flex direction="column" gap="6px">
         {LinkItems.map(link => (
           <NavItem key={link.name} icon={link.icon} pathname={link.pathname}>
             {link.name}

@@ -23,25 +23,27 @@ const Modal = ({
   return (
     <CModal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>{title}</ModalHeader>
+      <ModalContent mx={{base:'30px'}}>
+        <ModalHeader fontSize={{base:'sm', md:'md'}}>{title}</ModalHeader>
         {withCloseIcon && <ModalCloseButton />}
-        <ModalBody>{children}</ModalBody>
+        <ModalBody fontSize={{base:'sm', md:'md'}}>{children}</ModalBody>
         {!withCloseIcon && (
-          <ModalFooter>
+          <ModalFooter fontSize={{base:'sm', md:'md'}} flexDirection='row' justifyContent='space-evenly'>
             <Button
               onClick={onClose}
               text="Cancel"
               bgColor="white"
               textColor="gray.700"
               variant="outline"
+              size={{base:'sm', md:'md'}}
             />
-            <Box widht="8px" />
+            <Box width="10px" />
             <Button
               onClick={onConfirm}
               text={confirmButtonText}
               isBggradient
               isLoading={isButtonLoading}
+              size={{base:'sm', md:'md'}}
             />
           </ModalFooter>
         )}

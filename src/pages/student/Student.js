@@ -81,12 +81,17 @@ const Student = () => {
   return (
     <Box>
       <TableContainer>
-        <Flex justifyContent="space-between">
+        <Flex
+          justifyContent={{ base: 'none', md: 'space-between' }}
+          flexDirection={{ base: 'column', md: 'row' }}
+          gap="4px"
+          alignItems={{ base: 'center', md:'baseline' }}
+        >
           <Text
             color="#101828"
-            fontSize="24px"
+            fontSize={{ base: 'md', md: 'lg' }}
             fontFamily="Plus Jakarta Sans"
-            fontWeight="600px"
+            fontWeight="600"
           >
             Students List
           </Text>
@@ -94,6 +99,7 @@ const Student = () => {
             text="ADD NEW STUDENT"
             isBggradient
             onClick={() => setShowFormPopup(true)}
+            size={{ base: 'sm', md: 'sm' }}
           />
         </Flex>
         <Table variant="simple">

@@ -28,7 +28,8 @@ const Dashboard = () => {
   };
   return (
     <Box
-      display="flex"
+      display={{base:"flex",md:"flex"}}
+      flexDirection={{base:"column",md:"row"}}
       padding="32px"
       bgColor="white"
       gap="24px"
